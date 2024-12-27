@@ -19,7 +19,7 @@ public class WeatherEntity {
     private String cityName;
     private String country;
     private Integer temperature;
-    private LocalDateTime updateTime;
+    private LocalDateTime updatedTime;
     private LocalDateTime responseLocalTime;
     public WeatherEntity(String id, String requestedCityName, String cityName, String country, Integer temperature, LocalDateTime updateTime, LocalDateTime responseLocalTime) {
         this.id = id;
@@ -27,18 +27,18 @@ public class WeatherEntity {
         this.cityName = cityName;
         this.country = country;
         this.temperature = temperature;
-        this.updateTime = updateTime;
+        this.updatedTime = updateTime;
         this.responseLocalTime = responseLocalTime;
     }
 
-    public WeatherEntity(String id, String cityName, Integer temperature, LocalDateTime responseLocalTime, String requestedCityName, String country, LocalDateTime updateTime) {
-        this.id = "";
+    public WeatherEntity(String cityName, Integer temperature, LocalDateTime responseLocalTime, String requestedCityName, String country, LocalDateTime updateTime) {
+
         this.cityName = cityName;
         this.temperature = temperature;
         this.responseLocalTime = responseLocalTime;
         this.requestedCityName = requestedCityName;
         this.country = country;
-        this.updateTime = updateTime;
+        this.updatedTime = updateTime;
     }
     public WeatherEntity(){
 
@@ -85,11 +85,11 @@ public class WeatherEntity {
     }
 
     public LocalDateTime getUpdateTime() {
-        return updateTime;
+        return updatedTime;
     }
 
     public void setUpdateTime(LocalDateTime updateTime) {
-        this.updateTime = updateTime;
+        this.updatedTime = updateTime;
     }
 
     public LocalDateTime getResponseLocalTime() {

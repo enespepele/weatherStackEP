@@ -10,7 +10,10 @@ public class WeatherStackNovApplication {
 	private static final Logger logger = LoggerFactory.getLogger(WeatherStackNovApplication.class);
 	public static void main(String[] args) {
 		logger.info("App is started");
+
 		SpringApplication.run(WeatherStackNovApplication.class, args);
+		//2 24 36 da kaldık
+
 	}
 
 }
